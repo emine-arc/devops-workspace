@@ -1,0 +1,4 @@
+https://www.youtube.com/watch?v=qbO4MTESiJQ  Jenkins Integration with Nexus
+https://help.sonatype.com/repomanager3/ Nexus orijinal link
+
+export PS1="\[\e[m\]\u\[\e[36m\]@\h-\w:\[\e[36m\]\\$\[\e[m\] "

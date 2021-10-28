@@ -1,0 +1,40 @@
+sudo hostnamectl set-hostname stage && bash
+
+cd /opt/tomcat/bin
+ls -la
+sudo chmod +x *
+cd /opt/tomcat/conf
+vim tomcat-users.xml
+cd /opt/tomcat/webapps/host-manager/META-INF/
+sudo vi context.xml
+cd /opt/tomcat/webapps/manager/META-INF/
+sudo vi context.xml
+sudo /opt/tomcat/bin/shutdown.sh
+sudo /opt/tomcat/bin/startup.sh
+cd /etc/systemd/system
+sudo vi tomcat.service
+sudo systemctl enable tomcat
+sudo systemctl start tomcat
+
+
+sudo hostnamectl set-hostname production && bash
+cd /tmp
+wget https://ftp.itu.edu.tr/Mirror/Apache/tomcat/tomcat-8/v8.5.71/bin/apache-tomcat-8.5.71.zip
+unzip apache-tomcat-*.zip
+sudo mv apache-tomcat-8.5.71 /opt/tomcat
+cd /opt/tomcat
+cd /opt/tomcat/bin
+ls -la
+sudo chmod +x *
+cd /opt/tomcat/conf
+sudo vi tomcat-users.xml
+cd /opt/tomcat/webapps/host-manager/META-INF/
+sudo vi context.xml
+cd /opt/tomcat/webapps/manager/META-INF/
+sudo vi context.xml
+sudo /opt/tomcat/bin/shutdown.sh
+sudo /opt/tomcat/bin/startup.sh
+cd /etc/systemd/system
+sudo vi tomcat.service
+sudo systemctl enable tomcat
+sudo systemctl start tomcat

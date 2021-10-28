@@ -1,0 +1,33 @@
+Docker yukleme komutlari
+
+sudo yum update -y
+sudo amazon-linux-extras install docker -y
+sudo systemctl start docker
+sudo systemctl enable docker
+sudo systemctl status docker
+sudo usermod -a -G docker ec2-user
+newgrp docker
+docker version
+docker info
+
+docker help | less
+docker run -i -t ubuntu
+cat /etc/os-release
+docker image help
+docker container run --help
+docker run -i -t ubuntu  --ilk container strat etme bunda pulling aliyor
+docker container run -i -t ubuntu --image artik localde
+cat /etc/os-release --isletim sistemimize bakabiliyoruz
+echo $0 hangi shell kullandigini
+apt-get update && apt-get upgrade -y container update ediyor
+apt-get install vim   --vim yukluyor
+docker ps -container listeliyor
+docker ps -a calisan butun container goruyoruz
+docker container ls -a
+docker run -i -t --name clarus ubuntu
+docker start 4e6
+docker attach clarus
+docker inspect clarus | less icine giriyoruz
+docker rm 4e6 silme islemi ID ilk 3 hanesi al
+Pu67ixK.gd&cP)= docker password
+docker container prune butun container siliyor
